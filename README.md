@@ -4,7 +4,8 @@ ASIC - Funcion transferencia GNU Octave
 Octave: 
 ```
 sudo add-apt-repository ppa:picaso/octave
-sudo apt-get update ; sudo apt-get install octave
+sudo apt-get update
+sudo apt-get install octave
 ```
 
 octave-control: 
