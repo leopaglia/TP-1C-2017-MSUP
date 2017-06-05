@@ -5,11 +5,17 @@ function asic
     % clear console
     clc
     clear
+    
+    screensize = get(0, 'ScreenSize')
+    sz = [800, 500]
+    xpos = ceil((screensize(3)-sz(1))/2)
+    ypos = ceil((screensize(4)-sz(2))/2)
 
     fig = figure(
       'Visible', 'on', ...
-      'Position', [0, 0, 800, 500], ...
+      'Position', [xpos, ypos, sz(1), sz(2)], ...
       'Name', 'ASIC UI', ...
+      'Tag', 'main_figure', ...
       'NumberTitle', 'off'
     );
     
