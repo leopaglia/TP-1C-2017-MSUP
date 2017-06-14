@@ -1,11 +1,12 @@
 function asic
     % init libraries
     pkg load control
-    
+    pkg load signal
+
     % clear console
     clc
     clear
-    
+
     screensize = get(0, 'ScreenSize')
     sz = [800, 500]
     xpos = ceil((screensize(3)-sz(1))/2)
@@ -18,7 +19,7 @@ function asic
       'Tag', 'main_figure', ...
       'NumberTitle', 'off'
     );
-    
+
     % header
     uicontrol(
       'Style', 'text', ...
@@ -26,7 +27,7 @@ function asic
       'String', 'ASIC', ...
       'FontSize', 35
     );
-    
+
     % coef button
     uicontrol(
       'Style', 'pushbutton', ...
@@ -34,12 +35,12 @@ function asic
       'String', 'Ingresar coeficientes', ...
       'Callback', @coef
     );
-    
+
     % prc button
     uicontrol(
       'Style', 'pushbutton', ...
       'Position', [420, 40, 340, 220], ...
       'String', 'Ingresar polos, raices y ganancia', ...
       'Callback', @prc
-    );                                            
+    );
 end
